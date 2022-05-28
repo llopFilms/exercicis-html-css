@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #flexWrapper {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            overflow: auto;
+        }
+
+        #flexContainer {
+            width: 300px;
+            background-color: rgba(102, 231, 85, 0.829);
+            list-style-type: none;
+            margin: auto;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: flex-end;            
+        }
+
+        li {
+            background-color: tomato;
+            border: 1px solid black;
+            height: 100px;
+            flex-basis: calc(100%/3 - 3%); 
+            margin: 1.5%;
+            padding: 3px;
+            font-family: ubuntu;
+        }
+
+
+    </style>
+</head>
+    
+<body>
+    <div id="flexWrapper">
+        <ul id="flexContainer">
+            <li class="flexItem">1</li>
+            <li class="flexItem">2</li>
+            <li class="flexItem">3</li>
+            <li class="flexItem">4</li>
+            <li class="flexItem">5</li>
+        </ul>
+    </div>
+</body>
+</html>

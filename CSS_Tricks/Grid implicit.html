@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(2, 100px);
+            grid-gap: 20px;
+            grid-auto-columns: minmax(50px, auto);
+            grid-auto-rows: minmax(50px, auto);
+            grid-auto-flow: dense;
+        }
+
+        .item{
+            background-color:rgb(182, 107, 10);
+            color: white;
+            font-family: ubuntu;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .item:first-child{
+            grid-column-start: span 2;
+
+        }
+
+        .item:nth-child(8){
+            grid-column-start: 6;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="grid">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+    </section>
+</body>
+</html>

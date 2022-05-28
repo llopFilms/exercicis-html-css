@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .child {
+            min-height: 100px;
+            background: orange;
+            flex: calc(100%/3);
+            text-align: center;
+            line-height: 100px;
+            border: 5px solid white
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="child">a</div>
+        <div class="child">b</div>
+        <div class="child">c</div>
+        <div class="child">d</div>
+        <div class="child">e</div>
+        <div class="child">f</div>
+        <div class="child">g</div>        
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+
+$primary-color: rgb(49, 37, 37);
+$secondary-color: rgb(255, 101, 47);
+$text-color: rgb(201, 201, 191);
+
+html {
+	font-size: 62,5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin transition-ease {
+	transition: .65s ease-in-out;
+}
+
+@function set-text-color($color) {
+
+	@if (lightness($color) > 40%) {
+		@return #000;
+
+	}@else{
+		@return $text-color;
+	}
+}
