@@ -10,23 +10,27 @@
 		linear-gradient(
 			to right,
 			rgba($primary-color, .8),
-			rgba($primary-color, .6)),
+			rgba($primary-color, .6)
+		),
 		url("../img/21.jpg") center top;
 	background-size: cover;
 
 	&_name {
 		font-size: 5rem;
 		padding-bottom: 1rem;
-		margin-top: 1rem;
+		margin: .6rem 0;
 		border-bottom: 2px solid set-text-color($primary-color);
 
 		&--last {
 			color: $secondary-color;
-			font-weight: 700;
+			font-weight: bold;
 		}
 	}
 
-	&_subtitle {
-		padding-top: .75rem;
+	&_subtitle span {
+		color: $secondary-color;
+		font-weight: bold;
+		padding-right: .4rem;
 	}
+
 }

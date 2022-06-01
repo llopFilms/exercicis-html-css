@@ -3,6 +3,9 @@
 @import "config";
 @import "home";
 @import "menu";
+@import "about";
+@import "projects";
+@import "contact";
 
 body {
 	background: $primary-color;
@@ -22,13 +25,30 @@ a {
 	list-style: none;
 }
 
+.text-secondary {
+	color: $secondary-color;
+}
+
 .icon1 {
-	font-size: 1.8rem;
+	font-size: 1.9rem;
+}
+
+.icon2 {
+	font-size: 2.1rem;
 }
 
 .icon3{
-	padding: .2rem .2rem;
-	font-size: 1.9rem;
+	padding: 0 .2rem;
+	font-size: 2.1rem;
+}
+
+.icon4 {
+	padding: 0 .1rem;
+	font-size: 2.1rem;
+}
+
+.icon5 {
+	font-size: 2rem;
 }
 
 header {
@@ -60,15 +80,15 @@ main {
 
 footer {
 	font-family: monospace, serif;
-	font-size: .9rem;
+	font-size: .8rem;
 	
 	position: fixed;
-	bottom: .4rem;
+	bottom: .6rem;
 	right: 1rem;
 	text-align: right;
 	padding: 1rem;
 
 	span {
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 }
