@@ -6,7 +6,7 @@
 
 body {
   background: #3b28a5;
-  color: #8fac0f;
+  color: rgb(143, 172, 15);
 }
 
 .main {
@@ -18,25 +18,20 @@ body {
   width: 1150px;
   margin: 0 auto;
 }
-
 .main .main-paragraf1, .main .main-paragraf2 {
   width: 100%;
   font-family: ubuntu;
   font-weight: 700;
   line-height: 2;
 }
-
 .main .main-paragraf1:hover, .main .main-paragraf2:hover {
   color: pink;
 }
-
 .main .main-paragraf2:hover {
   color: #ff652f;
 }
-
 @media (max-width: 800px) {
   .main {
     flex-direction: column;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
