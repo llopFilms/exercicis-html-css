@@ -1,4 +1,4 @@
-# Exercicis autoaprenentage i curs pont BCN Activa
+# Exercicis autoaprenentage i curs pont IT Academy (Bcn Activa)
 
 Maquetació en:
   - CSS
