@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* user-select: none; */
+}
+
+.container-titol {
+  background-color: blanchedalmond;
+  height: auto;
+  border: 5px solid red;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 6rem;
+  width: fit-content;
+  margin: auto;
+  padding: 0 2rem;
+  border: 5px solid red;
+}
+
+.container-paragraf {
+  font-size: 2rem;
+  margin: 3rem auto;
+  border: 5px solid green;
+  width: 70%;
+  height: 400px;
+  overflow: auto;
+  padding: 1rem;
+}
+
+p {
+  color: rgb(9, 116, 57);
+  text-align: justify;
+}
+
+p::selection {
+  background-color: brown;
+  color: darkcyan;
+  text-shadow: 2px 2px black;
+}
+
+[href="#"] {
+  font-size: 25px;
+}
+
+[atr="X"] {
+  color: darkorange;
+}
+
+.psegon::first-letter {
+  font-size: 25px;
+  color: black;
+}
+
+.psegon::first-line {
+  color: red;
+}
+
+a,
+.psegon {
+  font-style: italic;
+}
+
+.noticia__titol--mida {
+  font-size: 30px;
+}
+
+.container {
+  font-size: 32px;
+}
+
+html {
+  font-size: 16px;
+}
+
+.quadrat1 {
+  width: 25vw;
+  height: 50vh;
+  background-color: black;
+}
+
+.container-titol2-3 {
+  border: 5px solid red;
+  height: 50vh;
+}
+
+.titol2,
+.titol3 {
+  display: inline-block;
+  margin: 2rem;
+  line-height: initial;
+  font-size: initial;
+  padding: 1rem 2rem;
+  background-color: rgb(13, 202, 139);
+
+}
+
+.quadre3 {
+  margin: 3rem auto;
+  width: 10rem;
+  height: 10rem;
+  background-color: blueviolet;
+  box-shadow: 1rem 1rem 1rem gray;
+  border-radius: 1rem;
+}
+
+.par2 {
+  color: #000;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: justify;
+  box-shadow: 1rem 1rem 2rem gray;
+  text-shadow: .05rem .05rem .1rem rgb(98, 214, 243);
+}
+
+.div-par3,
+.div-par4 {
+  width: 40%;
+  margin: 2rem;
+  text-align: justify;
+  padding: 1rem;
+  border: 1rem solid darkolivegreen;
+}
+
+.div-par3 {
+  float: left;
+}
+
+.div-par4 {
+  float: right;
+}
+
+.div5 {
+  width: 40%;
+  height: 15rem;
+  background-color: darkolivegreen;
+  margin: 2rem auto;
+  clear: both;
+}
+
+.par3,
+.par4 {
+  width: 40%;
+  margin: 2rem;
+  text-align: justify;
+  padding: 1rem;
+  border: 1rem solid darkolivegreen;
+}
+
+.par3 {
+  float: left;
+}
+
+.par4 {
+  float: right;
+}
+
+.div6 {
+  width: 40%;
+  height: 15rem;
+  background-color: darkolivegreen;
+  margin: 2rem auto;
+  clear: both;
+  cursor: pointer;
+}
+
+.div7 {
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(235, 126, 37, 0.5); */
+  background-image: url("/Españadero/assets//img/pexels-german-hoeffner-865631.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+ /*  background-attachment: fixed; */
+  margin: 5rem auto;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.div7 p {
+  color: #000;
+  font-weight: bold;
+  font-size: large;
+  margin: 2rem;
+  text-align: justify;
+}

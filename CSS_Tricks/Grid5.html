@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-size: 25px;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .fill {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            background-color: antiquewhite;
+        }
+
+        .fit {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            background-color: antiquewhite;
+        }
+
+        hr {
+            color: brown;
+            margin: 30px;
+        }
+
+        p {
+            color:darkslategray;
+            margin: 30px;
+            font-weight: bold;
+        }
+
+        .fill > div {
+            background-color: aquamarine;
+        }
+
+        .fit > div {
+            background-color: darksalmon;
+        }
+
+        div {
+            padding: 20px;
+            border: 5px solid cornflowerblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>auto-fill</p>
+
+    <div class="grid fill">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>    
+
+    <hr>
+    <p>auto-fit</p>
+
+    <div class="grid fit">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+</body>
+</html>

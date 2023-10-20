@@ -1,0 +1,24 @@
+
+
+
+
+img {
+	margin: 40px 20px;
+	width: 30vw;
+	height: 100px;
+	border: 5px solid orange;
+}
+
+.img1 {
+	object-fit: cover;
+	object-position: 15% 15%;
+}
+
+.img2 {
+	object-fit: contain;
+}
+
+.img3 {
+	object-fit: none;
+}
+

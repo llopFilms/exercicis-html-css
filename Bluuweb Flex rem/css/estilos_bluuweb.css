@@ -1,0 +1,350 @@
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(224, 222, 222);
+}
+
+a {
+    text-decoration: none;
+}
+
+.padding50 {
+    padding: 0 5rem;
+}
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .header {
+        background: url(../img/OWwK_0_EnxY.webp);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu {
+            background: rgba(0,0,0,.2);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 6rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+            .logo {
+                flex: 1 1 auto;
+            }
+
+                .logo a {
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 3rem;
+                }
+
+                .logo a:hover {
+                    color:#343434;
+                }
+
+            .nav {
+                flex: 5 1 auto;
+                display: flex;
+                justify-content: space-around;
+                
+            }
+
+                .nav a {
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    padding: 0 1rem;
+                    letter-spacing: .2rem
+                }
+
+                .nav a i {
+                    padding-right: .5rem;
+                }
+
+                .nav a:hover {
+                    color: #343434;
+                }
+
+            .social {
+                flex: 1 1 0;
+                display: flex;
+                justify-content: center;
+                gap: .5rem;
+            }
+
+                .social a {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+
+                .social a:hover {
+                    color:#343434;
+                }
+
+        .texto-principal {
+            height: 58rem;
+            display:flex;
+            align-items: center;
+        }
+
+            .texto-principal h1 {
+                font-family: 'Lora', serif;
+                font-size: 2.1rem;
+                color: rgba(255, 255, 255, 0.8);
+                font-weight: 300;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+    .section {
+        display: flex;
+    }
+
+        .articulos {
+            flex: 3 1 0;
+            display: flex;
+            flex-flow: row wrap;            
+        }
+            .article {
+                background: #ececec;
+                flex: 1 1 40%;
+                color: #444;
+                font-size: 1.3rem;
+                letter-spacing: .1rem;
+                margin: 1rem .5rem 0 .5rem;
+            }
+
+            .article img {
+                width: 100%;
+                height: auto;
+            }
+
+            .article h3 {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.3rem;
+                padding: 1rem 0;
+                margin: -7rem 0 0 1rem;    
+            }
+
+            .article h2 {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                padding-bottom: 1.5rem;
+                margin-left: 1rem;
+            }
+
+            .article p {
+                margin: 0 1.5rem 0 1rem;
+                text-align: justify;
+            }
+
+            .article a {
+                display: inline-block;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.3rem;
+                padding: 1rem;
+                background: #000;
+                margin: 1rem 0 1rem 0;
+            }
+
+            .article a:hover {
+                background: #546cc3;
+            }
+
+            .navegacion {
+                background: #000;
+                flex: 1 1 100%;
+                display: flex;
+                justify-content: center;
+                margin: 1rem 0.5rem 1rem 0.5rem; 
+            }
+
+            .navegacion a {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                padding: 0 1rem;
+                letter-spacing: .2rem;
+                
+            }
+
+        .aside {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-start;  
+            margin: 1rem .5rem 1rem 0;               
+        }
+
+        .aside img {
+            width: 100%;
+            height: 150px;
+        }
+
+            .publicidad h4 {
+            background-color: #000;
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            text-transform: uppercase;
+            }
+
+
+    .footer {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+        .pie {
+            
+        }
+
+        .pie a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+        }
+
+@media all and (max-width: 1130px) {
+
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo,
+    .nav,
+    .social {
+        padding: 5px 0 5px 0;
+    }
+
+    .texto-principal {
+        height: 45rem;
+    }
+
+    .texto-principal h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section {
+        flex-direction: column;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section h3,
+    .section p,
+    .section a {
+        font-size: 1rem;
+    }
+
+    .aside {
+        flex-direction: row;
+        justify-content: center;
+        gap: .5rem;
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .publicidad {
+        width: 30%;        
+    }
+
+    .publicidad h4 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .padding50 {
+        padding: 0 2rem;
+    }
+    
+    .logo a {
+        font-size: 2.5rem;
+    }
+    
+    .texto-icono {
+        font-size: .9rem;
+    }    
+
+    .texto-principal {
+        height: 40rem;
+    }
+
+    .texto-principal h1 {
+        font-size: 1.4rem;
+    }
+    
+    .articulos {
+        flex: column nowrap;
+    }
+
+    .article{
+        flex: 1 1 auto;
+    }
+
+}
+
+@media all and (max-width: 540px) {
+
+    .logo a {
+        font-size: 2rem;
+    }
+    
+    .texto-icono {
+        display: none;
+    }
+
+    .texto-principal {
+        height: 30rem;
+    }
+
+    .texto-principal h1 {
+        font-size: 1.2rem;
+    }
+    
+    .article h2 {
+        font-size: 1.8rem;
+    }
+    
+    .aside {
+        flex-direction: column;
+        align-items: center;
+       /*  gap: .5rem; */
+    }
+
+    .publicidad h4 {
+        flex: 1 1 100%;
+        font-size: 1rem;
+    }
+
+}

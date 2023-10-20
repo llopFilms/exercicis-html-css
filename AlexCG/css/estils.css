@@ -1,0 +1,153 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* max-width: 1200px; */
+}
+
+header {
+    background: linear-gradient(to right, #89216B, #DA4453);
+    height: 550px;
+    padding: 48px;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.icono {
+    /* display: block; */
+    font-size: 30px;
+    animation: moverizquierda 1s ease-in;
+    z-index: 1;
+}
+
+.enlaces {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    /* width: 100%; */
+    flex-direction: column;
+    transition: all 2s ease;
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+img {
+    height: 800px;
+    margin-top: 45px;
+    width: auto;
+    object-fit: cover;
+    animation: arriba 2s ease-in;
+}
+
+.textos {
+    width: 50%;
+    color: white;
+    padding-left: 250px;
+}
+
+.textos h1 {
+    font-size: 80px;
+    animation: moverderecha 2s ease-in;
+}
+
+.textos h2 {
+    font-size: 30px;
+    animation: moverizquierda 1s ease-in;
+}
+
+.textos a {
+    display: inline-block;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    animation: arriba 1s ease-in;
+}
+
+.wave {
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(to right, #89216B, #DA4453);
+
+}
+
+.uno {
+    clip-path: circle(100% at 1% 1%);
+}
+
+.dos {
+    clip-path: circle(0% at 0 0);
+}
+
+@keyframes moverizquierda {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moverderecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes arriba {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,83 @@
+
+
+html {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	user-select: none;
+	font-family: Helvetica,
+	Arial,
+	sans-serif;
+	color: #eee;
+}
+
+a {
+	color: #eee;
+}
+
+#nav {
+	position: fixed;
+	width: 100vw;
+	height: 6rem;
+	line-height: 6rem;
+	background-color: #000;
+	z-index: 1;
+}
+
+.enllaç-nav {
+	font-size: 2.5rem;
+	margin-right: 6rem;
+	transition: all 1s;
+}
+
+.enllaç-nav:hover {
+	color: #f009;
+	text-decoration: underline;
+}
+
+#logo {
+	float: left;
+	margin: 3rem 0 0 2rem;
+	width: 20rem;
+	height: auto;
+	opacity: .8;
+	border-radius: 2rem;
+}
+
+.llista-enllaços {
+	float: right;
+}
+
+.element-llista-enllaços {
+	display: inline-block;
+}
+
+#footer {
+	position: relative;
+	bottom: 0;
+	clear: both;
+	width: 100vw;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	background-color: #000;
+	font-size: 2rem;
+}
+
+#footer p {	
+	text-align: center;
+}
+
+#footer p a {
+	color: #999;	
+	transition: all 1s;
+}
+
+#footer p a:hover {
+	color: #eee;
+	text-decoration: underline;
+}
