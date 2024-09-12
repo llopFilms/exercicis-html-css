@@ -1,2 +1,426 @@
+/* SELECTORS */
+/* Selector universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector d'etiqueta*/
 body {
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+h2 {
+  color: olivedrab;
+  font-size: 32px;
+  margin-block: 10px;
+}
+
+/* Selector d'etiqueta múltiple */
+h3,
+a {
+  color: orchid;
+  margin-block: 15px;
+}
+
+/* Selector interior */
+footer p {
+  color: steelblue;
+  text-align: right;
+}
+
+/* Selector de classe */
+.text-aside {
+  font-size: 12px;
+}
+
+/* Selector d'atribut */
+a[href="https://lorem.cat"]
+{
+  color: steelblue;
+}
+
+/* UNITATS */
+/* Absolutes --> px */
+/* Relatives --> em, rem */
+
+body {
+  font-size: 16px;
+}
+
+/* em busca la referència de la mida de l'element pare */
+p {
+  font-size: 0.75em;
+}
+
+blockquote {
+  font-size: 0.5em;
+}
+/* % busquen la referència de l'element pare */
+.mitja-amplada {
+  width: 50%;
+}
+
+/* rem busca la referència de la mida de l'element fill */
+h2 {
+  font-size: 1.25rem;
+}
+
+/* COLORS */
+/* Noms del sistema */
+hr {
+  color: orangered;
+}
+
+/* RGB */
+h1 {
+  color: rgb(113, 30, 9);
+}
+
+/* RGBA afegeix transparència */
+h5 {
+  color: rgba(255, 165, 0, 0.5);
+}
+
+/* Hexadecimal */
+h4 {
+  color: #e3a70f;
+}
+
+/* MODEL DE CAIXA */
+/* Elements de bloc permeten canvi de mida --> hx, div, p, ul, li... */
+/* Element de línia, no --> a, span, img */
+
+.imatge-1 {
+  background-color: #d0a2bc;
+  width: 650px;
+  height: auto; /* per defecte */
+  border-radius: 20px;
+}
+
+.imatge-2 {
+  background-color: #f0d9a6;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/* Margin, fora de la caixa */
+/* Padding, dins de la caixa */
+.imatge-1 {
+  margin: 10px;
+  padding: 20px 10px 20px;
+}
+
+.imatge-2 {
+  margin: 15px 10px;
+  padding: 10px 15px 10px 8px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  border: 4px solid oldlace;
+  border-radius: 20px;
+}
+
+form {
+  padding: 20px;
+}
+
+/* FONS */
+body {
+  background-color: #fdeff7;
+}
+
+/* Superposició imatge i color */
+form {
+  background-image: url(../img/switzerland-2049667_640.jpg);
+  background-repeat: no-repeat;
+  background-color: rgba(240, 231, 166, 0.428);
+  background-blend-mode: overlay;
+}
+
+/* POSICIONAMENT */
+/* CSS niuat */
+
+.container {
+  position: relative;
+  width: 80%;
+  background-color: #f9e5f0;
+  border: 2px solid #fa53af;
+
+  .caixa {
+    width: 100px;
+    height: 100px;
+    background-color: #d0a2bc;
+    margin-block: 5px;
+
+    h4 {
+      text-align: center;
+      color: white;
+      margin: 0;
+    }
+  }
+
+  /* Centrada al contenidor */
+  .caixa-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0d9a6;
+  }
+
+  /* Punt fix determinat */
+  .caixa-3 {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #6cb65a;
+  }
+
+  /* Desplaçada de la seva posició original */
+  .caixa-4 {
+    position: relative;
+    left: 50%;
+    top: 25px;
+    background-color: #a0a3ed;
+  }
+
+  /* Enganxat al document i quiet */
+  .caixa-5 {
+    position: fixed;
+    background-color: #f15b47;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+  }
+
+  /* Enganxat dins del pare fins que s'acaba el contenidor */
+  .caixa-6 {
+    position: sticky;
+    bottom: 20px; /* bottom activa el sticky amb l'scroll */
+    left: 150px;
+    background-color: #e3a70f;
+  }
+
+  /* Flotar text a la dreta */
+  .float-caixa-9 {
+    width: 100%;
+    height: auto;
+    .caixa-9 {
+      float: left;
+    }
+
+    p {
+      margin-block: 10px;
+    }
+  }
+
+  /* Flotar text a l'esquerra */
+  .float-caixa-10 {
+    width: 100%;
+    height: auto;
+    .caixa-10 {
+      float: right;
+    }
+
+    p {
+      margin-block: 10px;
+    }
+  }
+
+  /* Neteja del float */
+  .clear {
+    clear: both;
+  }
+}
+
+/* TIPOGRAFIES i TEXTOS */
+/* Aspecte del text */
+.paragraf-1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(9, 48, 49);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+/* Jsutificació del text i alçada de línia */
+
+.paragraf-2 {
+  text-align: right;
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+.paragraf-3 {
+  text-align: center;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+/* ENLLAÇOS */
+nav {
+  li {
+    width: fit-content;
+    font-size: 20px;
+    background-color: #f0d9a6;
+    padding: 10px 20px;
+    margin-block: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px 2px gray;
+
+    /* Enllaços no visitats */
+    a:link {
+      color: #5a5fb6;
+      text-decoration: none;
+    }
+
+    /* Enllaços visitats */
+    a:visited {
+      color: #086416;
+    }
+
+    /* Enllaços quan el ratolí està a sobre */
+    a:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    /* Enllaços mentre es fan clic */
+    a:active {
+      color: #ff0000;
+    }
+  }
+
+  /* Si volem que afecti els botons, hem d'anar al <li> que miri com té l'<a>*/
+  /* Tot en una transició */
+  li {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Escalar el <li> quan el ratolí està a sobre l'enllaç */
+  li:has(a:hover) {
+    transform: scale(1.05);
+  }
+
+  /* Eliminar l'ombra del <li> quan es fa clic */
+  li:has(a:active) {
+    box-shadow: none;
+  }
+}
+
+/* IMATGES */
+
+img {
+  /* Per centrar-la, cal posar-la a block */
+  display: block;
+  margin: auto;
+  border: 4px solid oldlace;
+  border-radius: 20px;
+}
+
+.avatar {
+  background-color: #000000c3;
+  width: fit-content;
+  height: auto;
+  padding: 18px 20.5px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 8px rgb(157, 157, 157);
+  transition: all 0.75s ease;
+
+  a,
+  img {
+    /* Reseteja valors d'<> anteriors */
+    all: unset;
+  }
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  & a:visited {
+    background-color: #367c0a39;
+  }
+}
+
+/* LLISTES */
+
+.llistes {
+  padding-left: 10px;
+}
+
+.ul-ppal:nth-of-type(1) {
+  list-style-type: square;
+}
+
+.ol-ppal {
+  margin-left: 10px;
+  /* Separa el text dels números/punts */
+  text-indent: 8px;
+}
+
+.ol-sec {
+  padding-left: 10px;
+  list-style-type: lower-latin;
+}
+
+/* TAULES */
+
+table {
+  width: 100%;
+  border: 4px solid #777;
+  /* Elimina la doble línea */
+  border-collapse: collapse;
+
+  td,
+  th {
+    border: 2px solid #444;
+    padding: 10px;
+    /* Ajusta el text a dalt */
+    vertical-align: top;
+    /* Per defecte la capçalera alinia el text al centre */
+    text-align: left;
+  }
+
+  th {
+    min-width: 100px;
+        border: 2px solid #444;
+
+    background-color: #777;
+    color: #fff;
+  }
+
+  th + th {
+    /* Ha de ser una mica més ample que el que hi havia */
+    border-left: 2.5px solid #fff;
+  }
+
+  /* Pinta fons a les files alternativament */
+  tr:nth-child(even) {
+    background-color: #ecbfbfc3;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #e2b0b0;
+  }
+
+  /* En fer hover, canvia el color de fons de fila i cel·la */
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+
+  td:hover {
+    background-color: #999;
+    color: #fff;
+  }
 }

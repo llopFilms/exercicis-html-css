@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Esepecifica l'idioma -->
 <html lang="ca">
   <head>
     <!-- Definir el charset per evitar caràcters especials -->
@@ -12,7 +11,7 @@
       content="150 caràcter com a màxim per la descripció del lloc" />
 
     <!-- Definir el títol de la pàgina -->
-    <title>Estructura projecte</title>
+    <title>Curs CSS Bàsic</title>
     <!-- Definir l'icona de la pestanya -->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
 
@@ -23,67 +22,304 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <div>
-          <img
-            src="img/favicon.ico"
-            alt="Logo llop"
-            title="Logo llop"
-            width="70" />
+    <h2>Introducció</h2>
+    <!-- Capçaleres -->
+    <h1>Això és un H1</h1>
+    <h2>Això és un H2</h2>
+    <h3>Això és un h3</h3>
+    <!-- Salt de línia -->
+    <br />
+    <h4>Això és un H4</h4>
+    <h5>Això és un H5</h5>
+    <h6>Això és un H6</h6>
+    <br />
+
+    <!-- Paràgraf inclou salt de línia -->
+    <p class="mitja-amplada">
+      Fet ab tal artifici que es. Present llibre de cavalleria en set. Girà's a
+      la virtuosa Comtessa e ab. Ha bastat aterrar les forces dels enemics E per
+      ço. Per u e de tots havia obtesa. Ab molta impaciència per bé que. Molt
+      més de virtuts lo que. D'altres poetes; los sants miracles e actes
+      admirables. La sua gran saviesa e alt enginy havia servit per. Inspiració
+      propasà de retraure's de les armes e d'anar. Lo bon servir que fet m'haveu
+      E.
+    </p>
+    <p class="mitja-amplada">
+      Als servidors la sua partida En la fèrtil rica. Llibre de cavalleria en
+      set. Si li és possible per fer penitència e. Armes de cascú com era
+      ajustat se. Ben regit les poden virtuosament vivint mitigar. Virtuosos
+      actes que féu lo comte Guillem de Varoic en. Sens mitjà de virtuts Los
+      cavallers animosos. Que honor sens exercici de. Present vull satisfer a
+      cascú de vosaltres lo bon servir.
+    </p>
+
+    <!-- Línia -->
+    <hr />
+
+    <h2>Document</h2>
+    <h1>Títlol del document</h1>
+
+    <!-- Paràgraf amb negreta a afegida, sigui amb <b> o <strong>, que és equivalent -->
+    <p>
+      Fet ab tal artifici que es.
+      <b>Present llibre de cavalleria en set.</b> Girà's a la
+      <strong>virtuosa Comtessa</strong> e ab. Ha bastat aterrar les forces dels
+      enemics E per ço. Per u e de tots havia obtesa. Ab molta impaciència per
+      bé que.
+    </p>
+
+    <h2>Subtítol del document</h2>
+
+    <!-- Paràgraf amb cursiva a afegida amb <i> -->
+    <p>
+      Als servidors la sua partida En la fèrtil rica. Llibre de cavalleria en
+      set. Si li és possible <i>per fer penitència e</i>. Armes de cascú com era
+      ajustat se. Ben regit les poden virtuosament vivint mitigar. Virtuosos
+      actes que féu lo comte Guillem de Varoic en. Sens mitjà de virtuts Los
+      cavallers animosos. Que honor sens exercici de. Present vull satisfer a
+      cascú de vosaltres lo bon servir.
+    </p>
+
+    <h2>Cites</h2>
+    <!-- Cita afegida amb sigui <blockquote> i amb el seu autor amb <cite> i un <span> com a text separador -->
+    <blockquote>
+      Seran deduïdes en certa part del llibre. Deu ésser molt decorada perquè.
+      Ésser molt decorada perquè sens aquella los regnes e ciutats. Campals on
+      hi havia rei o fill de. Cristià deu anar si li és possible.
+      <span> - </span><cite>Tirant Lo Blanc</cite>
+    </blockquote>
+
+    <h2>Enllaços</h2>
+    <!-- Enllaç a ruta absoluta a una pestanya nova-->
+    <a href="https://lorem.cat" target="_blank">Anar a Lorem.cat</a>
+
+    <!-- Enllaç a ruta relativa a una imatge arxivada -->
+    <a href="img/switzerland-2049667_640.jpg">Anar a la imatge</a>
+
+    <!-- Enllaç per enviar un correu -->
+    <!-- Porta l'atribut 'title' per si es deixa el ratolí a sobre -->
+    <a href="mailto: jordidellop@gmail.com" title="Envia correu a J. Llop"
+      >Enviar correu per dubtes</a
+    >
+
+    <hr />
+
+    <h2>Llistes</h2>
+    <!--  Llista ordenada, el primer amb un enllaç -->
+    <div class="llistes">
+      <ul class='ul-ppal'>
+        <li><a href="#">Element #1</a></li>
+        <li>Element #2</li>
+        <li>Element #3</li>
+        <li>Element #4</li>
+        <li>Element #5</li>
+      </ul>
+      <!-- Llista ordenada, el primer amb un enllaç -->
+      <ol class='ol-ppal'>
+        <li><a href="#">Element #1</a></li>
+        <li>Element #2</li>
+        <li>Element #3</li>
+        <li>Element #4</li>
+        <li>Element #5</li>
+      </ol>
+      <!-- Llista amb submenú -->
+      <ul class='ul-ppal'>
+        <li><a href="#">Element #1</a></li>
+        <li>Element #2</li>
+        <ol class='ol-sec'>
+          <li>Sub-element #1</li>
+          <li>Sub-element #2</li>
+          <li>Sub-element #3</li>
+        </ol>
+        <li>Element #3</li>
+        <li>Element #4</li>
+        <li>Element #5</li>h3
+    </div>
+
+    <hr />
+
+    <h2>Imatges</h2>
+    <!-- Imatge local -->
+    <div class="imatge-1">
+      <img
+        src="img/switzerland-2049667_640.jpg"
+        title="Muntanyes a Suïssa"
+        alt="No s'ha pogut carregar la imatge de muntanyes de Suïssa"
+        width="400" />
+    </div>
+
+    <!-- Imatge a internet -->
+    <div class="imatge-2">
+      <img
+        src="https://picsum.photos/id/684/600/400"
+        title="Més muntanyes a Suïssa"
+        alt="No s'ha pogut carregar la imatge de muntanyes de Suïssa 2"
+        width="400" />
+    </div>
+
+    <hr />
+
+    <h2>Taules</h2>
+    <!-- Taula -->
+    <table>
+      <tr>
+        <!-- th fa la cel·la de capçalera -->
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+      </tr>
+      <tr>
+        <td>Contingut 4</td>
+        <td>Contingut 5</td>
+        <td>Contingut 6</td>
+      </tr>
+      <tr>
+        <!-- td fa la cel·la de contingut -->
+        <td>Contingut 7</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eum assumenda obcaecati perferendis impedit porro! Placeat odit ex nisi dolorem similique amet nobis neque ipsa, eveniet aliquam molestiae? Similique voluptatum aperiam eaque nisi, provident minima cumque sed magni, doloremque ex, animi nulla omnis harum debitis rerum veritatis fuga! Amet, unde?</td>
+        <td>Contingut 9</td>
+      </tr>
+      <tr>
+        <td>Contingut 10</td>
+        <td>Contingut 11</td>
+        <td>Contingut 12</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h2>Formularis</h2>
+    <!-- Formulari. -->
+    <!-- Mètode GET per passar les dades a la URL i fer sol·licituds (cerques). -->
+    <!-- Mètode POST per passar les dades a dins de la petició HTTP per seguretat o per passar dades (inscripcions, altes...) -->
+
+    <form action="/dades/arxiu-a-on-va.json" method="POST">
+      <!-- Input amb etiqueta -->
+      <label for="nom">Nom de pila</label>
+      <input
+        type="text"
+        id="nom"
+        name="nom"
+        placeholder="Escriu el teu nom" /><br /><br />
+
+      <label for="contrasenya">Contrasenya</label>
+      <input
+        type="password"
+        id="contrasenya"
+        name="contrasenya"
+        placeholder="Escriu el teu correu" /><br /><br />
+
+      <label for="correu-electronic"> Correu Electrònic</label>
+      <input
+        type="email"
+        id="correu-electronic"
+        name="correu-electronic"
+        placeholder="Escriu el teu correu electronic" /><br /><br />
+
+      <!-- Radios amb etiqueta -->
+      <input
+        type="radio"
+        id="boto-de-seleccio-home"
+        name="boto-de-seleccio-home" />
+      <label for="boto-de-seleccio-home">Home</label>
+      <input
+        type="radio"
+        id="boto-de-seleccio-dona"
+        name="boto-de-seleccio-dona" />
+      <label for="boto-de-seleccio-dona">Dona</label>
+      <br /><br />
+
+      <!-- Checkboxs amb etiqueta -->
+      <input
+        type="checkbox"
+        id="casella-de-seleccio-matins"
+        name="casella-de-seleccio-matins" />
+      <label for="casella-de-seleccio-matins">Matins</label>
+      <input
+        type="checkbox"
+        id="casella-de-seleccio-tardes"s">Tardes</label>
+      <br /><br />
+
+      <!-- Select amb etiqueta -->
+      <label for="selector-hora"></label>
+      <select id="selector-hora" name="selector-hora">
+        <option value="" selected disabled>Seleciona una hora</option>
+        <option value="10">10 del matí</option>
+        <option value="12">12 del migdia</option>
+        <option value="13">1 de la tarda</option>
+        <option value="15">3 de la tarda</option>
+        <option value="18">6 de la tarda</option>
+      </select>
+      <br /><br />
+
+      <!-- Botó que no envia el formulari, i s'ha de fer per Js -->
+      <input type="button" value="Enviar amb button" />
+      <!-- Botó que sí que envia el formulari segons la url de l'atribut 'action' -->
+      <input type="submit" value="Enviar amb submit" />
+
+      <hr />
+    </form>
+
+    <h2>Posicionament</h2>
+
+    <div class="container">
+      <div>
+        <h4>#1 normal</h4>
+      </div>
+      <div class='caixa caixa-2'>
+        <h4>#2 centrat</h4>
+      </div>
+      <div class='caixa caixa-3'>
+        <h4>#3 fix</h4>
+      </div>
+      <div class='caixa caixa-4'>
+        <h4>#4 desplaçat</h4>
+      </div>
+      <div class='caixa caixa-5'>
+        <h4>#5</h4>
+      </div>
+      <div class='caixa caixa-6'>
+        <h4>#6</h4>
+      </div>
+      <div class='caixa '>
+        <h4>#7</h4>
+      </div>
+      <div class='caixa '>
+        <h4>#8</h4>
+      </div>
+      <div class="float-caixa-9">
+        <div class='caixa caixa-9'>
+          <h4>#9 flota esquerra</h4>
         </div>
-        <ul>
-          <li><a href="#">enllaç #1</a></li>
-          <li><a href="#">enllaç #2</a></li>
-          <li><a href="#">enllaç #3</a></li>
-          <li><a href="#">enllaç #4</a></li>
-          <li><a href="#">enllaç #5</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <article>
-          <h2>Títol de l'alrticle 1</h2>
-          <p>
-            Útil e expedient deduir en escrit les gestes. Per què ara de
-            present. Antics ordenades justes e torneigs nodrint los infants de.
-            A Jesucrist serà plasent e lo viatge és de grandíssim. Guillem de
-            Varoic Aquest era un cavaller fortíssim. Als servidors la sua
-            partida En la fèrtil rica. Llibre de cavalleria en set. Si li és
-            possible per fer penitència e. Armes de cascú com era ajustat se.
-            Ben regit les poden virtuosament vivint mitigar.
-          </p>
-        </article>
-        <article>
-          <h2>Títol de l'article 2</h2>
-          <p>
-            Virtuosos actes que féu lo comte Guillem de Varoic en. Sens mitjà de
-            virtuts Los cavallers animosos. Que honor sens exercici de. Present
-            vull satisfer a cascú de vosaltres lo bon servir. On hi havia rei o
-            fill de rei i de. Seran deduïdes en certa part del llibre. Deu ésser
-            molt decorada perquè. Ésser molt decorada perquè sens aquella los
-            regnes e ciutats. Campals on hi havia rei o fill de. Cristià deu
-            anar si li és possible.
-          </p>
-        </article>
-      </section>
-      <aside>
-        <h3>Columna lateral</h3>
-        <p>
-          Varoic proposà d'anar al Sant. Comtessa lo qual anell era fet ab tal
-          artifici. Lo qual anell era fet ab. Útil e expedient deduir en escrit
-          les. Caixa de moneda e a cascú de sos. Servidors donà molt més que no.
-          Enemics E per ço foren per. Mitjà de virtuts Los cavallers animosos
-          volgueren morir en. Sens aquella los regnes e ciutats no es. Infants
-          de poca edat en l'exercici. En les batalles ans que fugir
-          vergonyosament La.
-        </p>
-      </aside>
-      <footer>
-        <p>Jordi Llop - llopFilms &copy;2024</p>
-      </footer>
-    </main>
+        <p class='paragraf-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eveniet nostrum est quae quos, consectetur magnam enim amet minus in impedit et inventore laborum neque eius sed deserunt iste?</p>
+        <p class='paragraf-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veniam nam asperiores iste doloremque voluptate esse obcaecati iure atque, consectetur adipisci perferendis fugit commodi, quis inventore cupiditate at quidem voluptatibus nesciunt porro tempore libero quam? Nulla, numquam repudiandae, totam est nostrum ab deserunt consequatur voluptatibus natus dolorum blanditiis quod voluptas laboriosam omnis recusandae fugit quam corporis asperiores dolore officia saepe provident molestias illum iste. Maiores officia recusandae qui nesciunt voluptatibus tempora, pariatur, in explicabo omnis, architecto illo temporibus iste quibusdam!</p>
+        <p class='clear paragraf-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, labore distinctio ex reiciendis dolor saepe in eius hic magnam repellendus architecto quasi ut numquam provident? Id officia facere sequi fuga quae neque fugit aperiam, cumque rem dolore sunt dolores minus consequuntur laborum tempore minima cupiditate voluptas debitis impedit, iste atque quibusdam veritatis quos. Nulla recusandae voluptates voluptate nisi? Suscipit, sapiente.</p>
+      </div>
+      <div class="float-caixa-10">
+        <div class='caixa caixa-10'>
+          <h4>#10 flota dreta</h4>
+        </div>
+        <p class='paragraf-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eveniet nostrum est quae quos, consectetur magnam enim amet minus in impedit et inventore laborum neque eius sed deserunt iste?</p>
+        <p class='paragraf-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et repudiandae, consequatur ducimus sit vitae ad minima. A, aspernatur eius voluptas similique molestias illo enim dolorem? Porro provident impedit amet quidem nisi tenetur laboriosam velit ducimus iure a, commodi quia repellendus iste eius reprehenderit necessitatibus, maxime quisquam labore mollitia rerum libero dolore. Nostrum placeat impedit recusandae ipsam voluptatem minima ipsum vero, aut quia error nihil minus ratione. Deleniti pariatur ex nesciunt quo saepe fugit, nihil dolore. Enim illum dicta repellat nemo.</p>
+        <p class='clear paragraf-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam autem ad eveniet reprehenderit adipisci eligendi voluptatibus vitae incidunt cumque iste numquam asperiores, mollitia in enim cupiditate tempore accusamus provident culpa. Est, tenetur culpa officiis labore illum ipsum beatae odit perspiciatis, amet blanditiis sint minus veniam sunt et pariatur voluptate consequatur, error nostrum doloribus esse tempora explicabo? Sequi ipsum culpa explicabo.</p>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#" target="_blank" class='enllaç-1'>Enllaç 1</a></li>
+        <li><a href="#" target="_blank"  class='enllaç-2'>Enllaç 2</a></li>
+        <li><a href="#" target="_blank"  class='enllaç-3'>Enllaç 3</a></li>
+        <li><a href="#" target="_blank"  class='enllaç-4'>Enllaç 4</a></li>
+        <li><a href="https://lorem.cat" target="_blank"  class='enllaç-5'>Enllaç 5</a></li>
+      </ul>
+    </nav>
+
+<a href="https://google.com">
+    <div class="avatar">
+      <img src="img/favicon.ico" alt="">
+    </div>
+  </a>
 
     <script>
       'use strict';
