@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --fons-primari: #fcf7f8;
+  --color-fosc: #1a1e21;
+  --blau: #3860ec;
+}
+
+body {
+  background: var(--fons-primari);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+}
+
+.contenidor {
+  max-width: 500px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.titol {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-fosc);
+  margin-bottom: 20px;
+}
+
+.grup {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid #ddd;
+
+  /* Estilitza el placeholder */
+  &::placeholder {
+    color: #555;
+  }
+}
+
+.grup div p,
+.grup div div,
+.grup div span,
+.grup ul li {
+  background: #dbdbdb;
+  padding: 10px;
+}
+
+/* ? ------------- ENLLAÇOS ------------- */
+/* HAN D'ANAR EN AQUEST ORDRE */
+
+/* S'activa quan  es pinta la pàgina */
+.enllas:link {
+  color: blue;
+}
+
+/* Enllaç ja visitat */
+.enllas:visited {
+  color: #b1b1b1;
+}
+
+/* S'activa quan hi passem pel famunt */
+.enllas:hover {
+  color: orange;
+}
+
+/* S'activa quan es clica */
+.enllas:active {
+  color: #000;
+}
+
+/* S'aplica a l'element amb una id --> # */
+/* Quan l'enllaç envia a una secció */
+&:target {
+  color: #ef3939;
+}
+
+/* ? --- --- --- --- INPUTS --- --- --- --- */
+
+input {
+  /* Passem el ratolí per sobre de l'element */
+  &:hover {
+    border-color: #1a1e21;
+  }
+
+  /* Hi ha l'atenció en l'element */
+  &:focus {
+    border-color: #3860ec;
+  }
+
+  &:valid {
+    /* Quan la validació del camp és correcta */
+  }
+
+  &:invalid {
+    /* Quan la validació del camp és incorrecta */
+  }
+
+  &:required {
+		/* Quan el camp és obligatori */
+  }
+}
+
+.grup-input {
+  /* S'aplica quan es clica qualsevol camp d'un formular */
+  &:focus-within {
+    background-color: #c8cff9;
+  }
+	
+	/* Afegim '*' als camps obligatoris d'un formulari */
+	&:has(input:required) {
+		.label-input:after {
+			content: '* Camp obligatori';
+      color: #ff000088;
+      font-size: 12px;
+      margin-left: 10px;
+		}
+	}
+}
+
+	
+
+
+
+/* ? --- --- --- --- PARÀGRAFS --- --- --- --- */
+.paragrafs p:first-child {
+  background: var(--blau);
+  color: #fff;
+}
+
+.paragrafs p:last-child {
+  background: #000;
+  color: #fff;
+}
+
+/* ? --- --- --- --- ELEMENTS --- --- --- --- */
+.elements p:first-of-type {
+  background: var(--blau);
+  color: #fff;
+}
+
+.elements div:last-of-type {
+  background: #000;
+  color: #fff;
+}
+
+/* ? --- --- --- --- LLISTA --- --- --- --- */
+.llista :nth-child(2) {
+  background: var(--blau);
+  color: #fff;
+}
+
+.llista :nth-last-child(3) {
+  background: #000;
+  color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+.lista2 p:nth-of-type(2) {
+  background: var(--blau);
+  color: #fff;
+}
+
+.lista2 div:nth-last-of-type(2) {
+  background: #000;
+  color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+.lista3 p:only-child {
+  background: var(--blau);
+  color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
+.lista4 p:only-of-type {
+  background: var(--blau);
+  color: #fff;Nom
+}

@@ -16,7 +16,7 @@ body {
 .container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 1.5rem;
 
   .logo {
     background-color: #000;
@@ -29,7 +29,6 @@ body {
   .llista-enllaços {
     background-color: #4a9ad4;
     list-style-type: none;
-    margin-block: 0.25rem;
     padding-block: 0.5rem;
     font-size: 0.75rem;
 
@@ -51,8 +50,8 @@ body {
 
   .section {
     float:left;
-    width: 67%;
-    margin-right: 1rem;
+    width: 67.5%;
+    margin-right: 2.5%;
   }
 
   .article {
@@ -74,6 +73,12 @@ body {
     h2 {
       margin-block: 0.5rem 0;
       font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin-block: 0.5rem 0;
+      font-size: 1rem;
       line-height: 1.2;
     }
 

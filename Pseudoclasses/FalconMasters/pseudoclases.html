@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclasses CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="css/pseudoclases.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1 class="titulo">Pseudoclasses en CSS</h1>
+
+      <div class="grup">
+        <label>:active / :link / :visited / :hover</label>
+        <a class="enllas" href="#">Anar a la pàgina web</a>
+        <a class="enllas" href="https://www.google.com">Anar a Google</a>
+      </div>
+
+      <div class="grup grup-input">
+        <label for="input-text" class='label-input'> Nom</label>
+				<input type="text" placeholder="Escriu el teu nom..." required />
+      </div>
+
+      <div class="grup">
+        <label>:first-child / :last-child</label>
+        <div class="paragrafs">
+          <p>Sóc el primer paràgraf!</p>
+          <p>Sóc el segon paràgraf!</p>
+          <p>Sóc el tercer paràgraf!</p>
+        </div>
+      </div>
+
+      <div class="grup">
+        <label>:first-of-type / :last-of-type</label>
+        <div class="elementos">
+          <div>Hola Sóc un div!</div>
+          <p>Hola Sóc un paràgraf!</p>
+          <span>Hola Sóc un span!</span>
+          <p>Hola Sóc un altre paràgraf!</p>
+          <div>Hola Sóc un altre div!</div>
+        </div>
+      </div>
+
+      <div class="grup">
+        <label>:nth-child() / :nth-last-child</label>
+        <ul class="llista">
+          <li>Sóc l'opció #1</li>
+          <li>Sóc l'opció #2</li>
+          <li>Sóc l'opció #3</li>
+          <li>Sóc l'opció #4</li>
+          <li>Sóc l'opció #5</li>
+          <li>Sóc l'opció #6</li>
+          <li>Sóc l'opció #7</li>
+          <li>Sóc l'opció #8</li>
+        </ul>
+      </div>
+
+      <div class="grup">
+        <label>:nth-of-type() / :nth-last-of-type()</label>
+        <div class="llista2">
+          <div>Hola Sóc un div!</div>
+          <p>Hola Sóc un paràgraf!</p>
+          <p>Hola Sóc un altre paràgraf!</p>
+          <span>Hola Sóc un span!</span>
+          <p>Hola Sóc un altre paràgraf!</p>
+          <div>Hola Sóc un altre div!</div>
+        </div>
+      </div>
+
+      <div class="grup">
+        <label>:only-child</label>
+        <div class="llista3">
+          <p>Hola, Sóc l'únic fill d'aquesta llista!</p>
+        </div>
+      </div>
+
+      <div class="grup">
+        <label>:only-of-type</label>
+        <div class="llista4">
+          <div>Hoy, Sóc un div.</div>
+          <p>Hola, Sóc l'únic paràgraf d'aquesta llista!</p>
+          <div>Hoy, Sóc un div.</div>
+          <div>Hoy, Sóc un div.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

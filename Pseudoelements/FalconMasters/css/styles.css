@@ -1,0 +1,125 @@
+/* Fem servir variables pels colors */
+:root {
+  --fons-primari: #323941;
+  --fons-secundari: #1a1e21;
+  --blau-primari: #3860ec;
+  --blau-secundari: #2247ce;
+}
+
+body {
+  background: var(--fons-primari);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contenidor {
+  background: var(--fons-secundari);
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.logo {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 70%;
+}
+
+.text {
+  position: relative;
+  background: var(--fons-primari);
+  padding: 25px;
+  color: #fff;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 28px;
+
+  /* Pseudoelements en CSS */
+
+  /* Actúa amb el text seleccionat */
+  &::selection {
+    background-color: #5d0e0e;
+    color: #fff;
+  }
+
+  /* Modificació de la primera lletra */
+  &::first-letter {
+    font-size: 50px;
+    margin-right: 5px;
+  }
+
+  /* Modificació de la primer línia */
+  &::first-line {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  /* Element muntat després de l'element posicionat amb absolute */
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--fons-primari);
+    /* Es poden fer més d'un transform */
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.boto {
+  width: 100%;
+  background: var(--blau-primari);
+  display: inline-block;
+  padding: 25px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: 0.3s ease all;
+
+  /* Element muntat abans de l'element */
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: baseline;
+    background-image: url('../svg/rocket-solid.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+}
+
+.boto:hover {
+  background: var(--blau-secundari);
+}
+
+.enllas {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #d4d4d4;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.enllas:hover {
+  text-decoration: underline;
+}
