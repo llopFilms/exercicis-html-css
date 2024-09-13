@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Selector d'etiqueta*/
@@ -134,11 +135,15 @@ body {
 }
 
 /* Superposició imatge i color */
-form {
+.container-form {
+  padding-block: 20px;
   background-image: url(../img/switzerland-2049667_640.jpg);
   background-repeat: no-repeat;
-  background-color: rgba(240, 231, 166, 0.428);
+  background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
+  background-size: cover;
+  color: #fff;
+  font-weight: 500;
 }
 
 /* POSICIONAMENT */
@@ -394,7 +399,7 @@ table {
 
   th {
     min-width: 100px;
-        border: 2px solid #444;
+    border: 2px solid #444;
 
     background-color: #777;
     color: #fff;
@@ -422,5 +427,88 @@ table {
   td:hover {
     background-color: #999;
     color: #fff;
+  }
+}
+
+/* FORMULARIS */
+
+form {
+  width: 50%;
+  margin: auto;
+  border: 3px solid #a0a3ed;
+  border-radius: 5px;
+
+  label {
+    display: block;
+    font-size: 14px;
+  }
+
+  input[type='radio'] + label,
+  input[type='checkbox'] + label {
+    display: inline;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-block: 5px 25px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    margin: 10px 5px;
+  }
+
+  input[type='checkbox'] {
+    margin-bottom: 25px;
+  }
+
+  textarea {
+    /* Sense canviar mida */
+    resize: none;
+    height: 150px;
+    overflow-y: scroll;
+  }
+
+  input,
+  select,
+  textarea {
+    border: 3px solid #fda713;
+
+    &:focus {
+      outline: 2.5px solid #fff;
+    }
+  }
+
+  .button-container{
+    width: fit-content;
+    margin: auto;
+  }
+
+  input[type='button'], input[type='submit'] {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: #a0a3ed;
+    background-color: #a0a3ed;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #767bf6;
+      border-color:  #767bf6;
+      color: #fff;
+    }
+  }
+
+  input:last-child {
+    margin-left: 10px;
   }
 }
