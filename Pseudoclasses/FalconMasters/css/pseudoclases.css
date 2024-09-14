@@ -3,13 +3,19 @@
 }
 
 :root {
-  --fons-primari: #fcf7f8;
-  --color-fosc: #1a1e21;
-  --blau: #3860ec;
+  --fons: #fcf7f8;
+  --color-blau: #3860ec;
+  --color-blanc: #fff;
+  --color-gris-clar: #dedcdc;
+  --color-gris: #b1b1b1;
+  --color-gris-fosc: #555;
+  --color-negre: #000;
+  --color-taronja: #ffa500;
+  --color-vermell: #ef3939;
 }
 
 body {
-  background: var(--fons-primari);
+  background: var(--fons);
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -39,7 +45,7 @@ ul {
 
 .grup {
   padding: 60px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-gris);
 }
 
 label {
@@ -50,11 +56,11 @@ label {
 input {
   border-radius: 3px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-gris);
 
   /* Estilitza el placeholder */
   &::placeholder {
-    color: #555;
+    color: var(--color-gris-fosc);
   }
 }
 
@@ -62,7 +68,7 @@ input {
 .grup div div,
 .grup div span,
 .grup ul li {
-  background: #dbdbdb;
+  background: var(--color-gris-clar);
   padding: 10px;
 }
 
@@ -71,28 +77,28 @@ input {
 
 /* S'activa quan  es pinta la pàgina */
 .enllas:link {
-  color: blue;
+  color: var(--color-blau);
 }
 
 /* Enllaç ja visitat */
 .enllas:visited {
-  color: #b1b1b1;
+  color: var(--color-gris);
 }
 
 /* S'activa quan hi passem pel famunt */
 .enllas:hover {
-  color: orange;
+  color: var(--color-taronja);
 }
 
 /* S'activa quan es clica */
 .enllas:active {
-  color: #000;
+  color: var(--color-negre);
 }
 
 /* S'aplica a l'element amb una id --> # */
 /* Quan l'enllaç envia a una secció */
 &:target {
-  color: #ef3939;
+  color: var(--color-vermell);
 }
 
 /* ? --- --- --- --- INPUTS --- --- --- --- */
@@ -100,12 +106,12 @@ input {
 input {
   /* Passem el ratolí per sobre de l'element */
   &:hover {
-    border-color: #1a1e21;
+    border-color: var(--color-gris-fosc);
   }
 
   /* Hi ha l'atenció en l'element */
   &:focus {
-    border-color: #3860ec;
+    border-color: var(--color-blau);
   }
 
   &:valid {
@@ -117,83 +123,145 @@ input {
   }
 
   &:required {
-		/* Quan el camp és obligatori */
+    /* Quan el camp és obligatori */
   }
 }
 
+/* div del Formulari */
 .grup-input {
-  /* S'aplica quan es clica qualsevol camp d'un formular */
+  /* S'aplica a tot el formulari quan es clica qualsevol camp del formulari */
   &:focus-within {
-    background-color: #c8cff9;
+    background-color: var(--color-gris-clar);
   }
-	
-	/* Afegim '*' als camps obligatoris d'un formulari */
-	&:has(input:required) {
-		.label-input:after {
-			content: '* Camp obligatori';
-      color: #ff000088;
+
+  /* Afegim '* Camp obligatori' als camps obligatoris del formulari */
+  &:has(input:required) {
+    .label-input:after {
+      content: '* Camp obligatori';
+      color: var(--color-vermell);
       font-size: 12px;
       margin-left: 10px;
-		}
-	}
+    }
+  }
 }
-
-	
-
-
 
 /* ? --- --- --- --- PARÀGRAFS --- --- --- --- */
-.paragrafs p:first-child {
-  background: var(--blau);
-  color: #fff;
-}
+/* A dins del contenidor, selecciona etiqueta, i ordre */
+.paragrafs {
+  p {
+    &:first-child {
+      background: var(--color-blau);
+      color: var(--color-blanc);
+    }
 
-.paragrafs p:last-child {
-  background: #000;
-  color: #fff;
+    &:last-child {
+      background: var(--color-negre);
+      color: var(--color-blanc);
+    }
+  }
 }
 
 /* ? --- --- --- --- ELEMENTS --- --- --- --- */
-.elements p:first-of-type {
-  background: var(--blau);
-  color: #fff;
-}
+/* A dins del contenidor, selecciona pel tipus, primer o últim */
 
-.elements div:last-of-type {
-  background: #000;
-  color: #fff;
+.elements {
+  p:first-of-type {
+    background: var(--color-blau);
+    color: var(--color-blanc);
+  }
+
+  div:last-of-type {
+    background: var(--color-negre);
+    color: var(--color-blanc);
+  }
 }
 
 /* ? --- --- --- --- LLISTA --- --- --- --- */
-.llista :nth-child(2) {
-  background: var(--blau);
-  color: #fff;
-}
+/* A dins del contenidor, selecciona el número de fill */
 
-.llista :nth-last-child(3) {
-  background: #000;
-  color: #fff;
+.llista {
+  li {
+    /* Començant pel principi */
+    &:nth-child(3) {
+      background: var(--color-blau);
+      color: var(--color-blanc);
+    }
+
+    /* Començant pel final */
+    &:nth-last-child(2) {
+      background: var(--color-negre);
+      color: var(--color-blanc);
+    }
+  }
 }
 
 /* ? --- --- --- --- LISTA 2 --- --- --- --- */
-.lista2 p:nth-of-type(2) {
-  background: var(--blau);
-  color: #fff;
-}
+/* A dins del contenidor, seleccona el número, per tipus */
 
-.lista2 div:nth-last-of-type(2) {
-  background: #000;
-  color: #fff;
+.llista2 {
+  p:nth-of-type(2) {
+    background: var(--color-blau);
+    color: var(--color-blanc);
+  }
+
+  div:nth-last-of-type(2) {
+    background: var(--color-negre);
+    color: var(--color-blanc);
+  }
 }
 
 /* ? --- --- --- --- LISTA 3 --- --- --- --- */
-.lista3 p:only-child {
-  background: var(--blau);
-  color: #fff;
+/* A dins del contenidor, selecciona l'únic del fill del tipus X*/
+
+.llista3 p:only-child {
+  background: var(--color-blau);
+  color: var(--color-blanc);
 }
 
 /* ? --- --- --- --- LISTA 4 --- --- --- --- */
-.lista4 p:only-of-type {
-  background: var(--blau);
-  color: #fff;Nom
+/* A dins del contenidor, seleccona l'únic fill del tipus X */
+
+.llista4 p:only-of-type {
+  background: var(--color-blau);
+  color: var(--color-blanc);
 }
+
+/* ? --- --- --- --- LLISTA 5 --- --- --- --- */
+/* A dins del contenidor, selecciona parells i imparells */
+
+.llista5 {
+  li {
+    /* Imparells */
+    &:nth-child(odd) {
+      background: var(--color-blau);
+      color: var(--color-blanc);
+    }
+
+    /* Parells */
+    &:nth-child(even) {
+      background: var(--color-negre);
+      color: var(--color-blanc);
+    }
+  }
+}
+
+/* ? --- --- --- --- LLISTA 5 --- --- --- --- */
+/* A dins del contenidor, selecciona cada X elements */
+
+.llista6 {
+  li {
+    /* Cada 3 */
+    &:nth-child(3n) {
+      background: var(--color-blau);
+      color: var(--color-blanc);
+    }
+
+    /* Cada 2 començant pel 5è*/
+    &:nth-child(2n+5) {
+      background: var(--color-negre);
+      color: var(--color-blanc);
+    }
+  }
+}
+
+

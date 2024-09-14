@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-fons: #fcf7f8;
+  --color-blanc: #fff;
+  --color-fosc: #1a1e21;
+	--color-gris: #ddd;
+  --color-blau-primari: #3860ec;
+  --color-blau-secundari: #2247ce;
+  --color-valid: #5ad37e;
+  --color-invalid: #dd6f6f;
+  --color-reuired: #dee03f;
+  --color-default: #ff8800;
+}
+
+body {
+  background: var(--color-fons);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contenidor {
+  max-width: 500px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.titol {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-fosc);
+  margin-bottom: 20px;
+}
+
+/* ? ------------- Estilos del Formulario ------------- */
+
+.formulari {
+  .grup {
+    margin-bottom: 60px;
+
+    input:not([type='checkbox']):not([type='radio']) {
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px;
+      border: 1px solid var(--color-fosc);
+    }
+
+    label {
+      display: block;
+      color: var(--color-fosc);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .radio input,
+    .checkbox input {
+      margin-right: 10px;
+    }
+
+    .checkbox label {
+      margin-right: 20px;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: 0.3s ease all;
+    }
+  }
+
+  .boto {
+    width: 100%;
+    background: var(--color-blau-primari);
+    display: inline-block;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    color: var(--color-fons);
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      background: var(--color-blau-secundari);
+    }
+  }
+}
+
+/* ? ------------- Pseudoclases ------------- */
+.formulari {
+  .nom:focus {
+    border: 3px solid var(--color-blau-primari);
+		color: red;
+  }
+
+  .id:disabled {
+    background: var(--color-gris);
+  }
+
+  .correu:valid {
+    background: var(--color-valid);
+    border: none;
+  }
+
+  .correu:invalid {
+    background: var(--color-invalid);
+    border: none;
+  }
+
+  .missatge:required {
+    background: var(--color-reuired);
+    border: none;
+  }
+
+  .radio input:checked {
+    box-shadow: 0 0 10px 1px var(--color-blau-primari);
+  }
+
+  .checkbox input:default {
+    box-shadow: 0 0 10px 1px var(--color-default);
+  }
+
+  .edat:in-range {
+    background: var(--color-valid);
+    border: none;
+  }
+
+  .edat:out-of-range {
+    background: var(--color-invalid);
+    border: none;
+  }
+}

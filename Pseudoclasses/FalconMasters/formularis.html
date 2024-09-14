@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pseudo-Clases para Formularios - CSS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link rel="stylesheet" href="css/formularis.css">
+</head>
+<body>
+	<div class="contenidor">
+		<h1 class="titol">Pseudoclasses per formularis</h1>
+
+		<form class="formulari" action="">
+			<div class="grup">
+				<label>:focus</label>
+				<input class="nom" type="text" placeholder="Escriu el teu nom">
+			</div>
+
+			<div class="grup">
+				<label>:disabled</label>
+				<input class="id" type="text" placeholder="Id: 1" disabled>
+			</div>
+
+			<div class="grup">
+				<label>:invalid</label>
+				<input  class="correu" type="email" placeholder="Escriu el teu correu" value="correu" required>
+			</div>
+
+			<div class="grup">
+				<label>:valid</label>
+				<input  class="correu" type="email" placeholder="Escriu el teu correu" value="correu@correu.net" required>
+			</div>
+
+			<div class="grup">
+				<label>:required</label>
+				<input class="missatge" type="text" placeholder="Mensaje" value="Això és un camp obligatori" required>
+			</div>
+			
+			<div class="grup">
+				<label>:checked</label>
+				<div class="radio">
+					<label><input type="checkbox" id="terminos">Accepto els termes i condicions</label>
+				</div>
+			</div>
+			
+			<div class="grup">
+				<label>:default</label>
+				<div class="checkbox">
+					<label><input type="radio" name="opcio" id="1" value="1">Opció  1</label>
+					<label><input type="radio" name="opcio" id="2" value="2" checked>Opció  2 (per defecte)</label>
+					<label><input type="radio" name="opcio" id="3" value="3">Opció  3</label>
+				</div>
+			</div>
+
+			<div class="grup">
+				<label>:out-of-range</label>
+				<input class="edat" type="number" placeholder="101" min="1" max="50" value="51">
+			</div>
+
+			<div class="grup">
+				<label>:in-range</label>
+				<input class="edat" type="number" placeholder="101" min="1" max="50" value="50">
+			</div>
+
+			<button type="submit" class="boto">Registrar-se</button>
+		</form>
+	</div>
+</body>
+</html>

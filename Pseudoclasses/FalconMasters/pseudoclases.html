@@ -23,11 +23,12 @@
       </div>
 
       <div class="grup grup-input">
-        <label for="input-text" class='label-input'> Nom</label>
-				<input type="text" placeholder="Escriu el teu nom..." required />
+        <label for="input-text" class="label-input"> Nom</label>
+        <input type="text" placeholder="Escriu el teu nom..." required />
       </div>
 
       <div class="grup">
+        <label>Paràgrafs</label>
         <label>:first-child / :last-child</label>
         <div class="paragrafs">
           <p>Sóc el primer paràgraf!</p>
@@ -37,8 +38,9 @@
       </div>
 
       <div class="grup">
+        <label>Elements</label>
         <label>:first-of-type / :last-of-type</label>
-        <div class="elementos">
+        <div class="elements">
           <div>Hola Sóc un div!</div>
           <p>Hola Sóc un paràgraf!</p>
           <span>Hola Sóc un span!</span>
@@ -48,6 +50,7 @@
       </div>
 
       <div class="grup">
+        <label>Llista 1</label>
         <label>:nth-child() / :nth-last-child</label>
         <ul class="llista">
           <li>Sóc l'opció #1</li>
@@ -62,6 +65,7 @@
       </div>
 
       <div class="grup">
+        <label>Llista 2</label>
         <label>:nth-of-type() / :nth-last-of-type()</label>
         <div class="llista2">
           <div>Hola Sóc un div!</div>
@@ -76,7 +80,7 @@
       <div class="grup">
         <label>:only-child</label>
         <div class="llista3">
-          <p>Hola, Sóc l'únic fill d'aquesta llista!</p>
+          <p>Hola, Sóc l'únic fill p d'aquesta llista!</p>
         </div>
       </div>
 
@@ -88,6 +92,36 @@
           <div>Hoy, Sóc un div.</div>
           <div>Hoy, Sóc un div.</div>
         </div>
+      </div>
+
+      <div class="grup">
+        <label>Llista 5</label>
+        <label>:nth-child(even) / :nth-child(odd)</label>
+        <ul class="llista5">
+          <li>Sóc l'opció #1</li>
+          <li>Sóc l'opció #2</li>
+          <li>Sóc l'opció #3</li>
+          <li>Sóc l'opció #4</li>
+          <li>Sóc l'opció #5</li>
+          <li>Sóc l'opció #6</li>
+          <li>Sóc l'opció #7</li>
+          <li>Sóc l'opció #8</li>
+        </ul>
+      </div>
+
+      <div class="grup">
+        <label>Llista 6</label>
+        <label>:nth-child(3n) / :nth-child(2n+5)</label>
+        <ul class="llista6">
+          <li>Sóc l'opció #1</li>
+          <li>Sóc l'opció #2</li>
+          <li>Sóc l'opció #3</li>
+          <li>Sóc l'opció #4</li>
+          <li>Sóc l'opció #5</li>
+          <li>Sóc l'opció #6</li>
+          <li>Sóc l'opció #7</li>
+          <li>Sóc l'opció #8</li>
+        </ul>
       </div>
     </div>
   </body>
